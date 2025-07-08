@@ -10,7 +10,8 @@ def greet(name):
     print(f"Hello, {name}!")
 
 if __name__ == "__main__":
-    # Запрашиваем имя пользователя
-    user_name = input("Enter your name: ")
+    user_name = input("Enter your name (default: World): ")
+    if not user_name.strip():
+        user_name = "World"
     greet(user_name)
-
+    
